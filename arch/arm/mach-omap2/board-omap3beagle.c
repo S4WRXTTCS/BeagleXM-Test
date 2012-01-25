@@ -461,6 +461,11 @@ static struct omap_dss_device beagle_dvi_device = {
 	.driver_name = "generic_dpi_panel",
 	.data = &dvi_panel,
 	.phy.dpi.data_lines = 24,
+	.clocks = {
+		.dispc = {
+			.dispc_fclk_src = OMAP_DSS_CLK_SRC_DSI_PLL_HSDIV_DISPC,
+		},
+	},
 	.reset_gpio = -EINVAL,
 };
 
