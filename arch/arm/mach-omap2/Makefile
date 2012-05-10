@@ -193,6 +193,7 @@ obj-$(CONFIG_MACH_OMAP_2430SDP)		+= board-2430sdp.o \
 					   hsmmc.o
 obj-$(CONFIG_MACH_OMAP_APOLLON)		+= board-apollon.o
 obj-$(CONFIG_MACH_OMAP3_BEAGLE)		+= board-omap3beagle.o \
+					   board-omap3beagle-camera.o \
 					   hsmmc.o
 obj-$(CONFIG_MACH_DEVKIT8000)     	+= board-devkit8000.o \
                                            hsmmc.o
@@ -206,6 +207,10 @@ obj-$(CONFIG_MACH_OMAP3_TORPEDO)        += board-omap3logic.o \
 obj-$(CONFIG_MACH_OVERO)		+= board-overo.o \
 					   hsmmc.o
 obj-$(CONFIG_MACH_OMAP3EVM)		+= board-omap3evm.o \
+					   hsmmc.o
+obj-$(CONFIG_MACH_AMG7_OMAP35XX)	+= board-amg7-omap35xx.o \
+					   hsmmc.o
+obj-$(CONFIG_MACH_AMG_XLCORE_CAMERA)	+= board-amg-xlcore-camera.o \
 					   hsmmc.o
 obj-$(CONFIG_MACH_OMAP3_PANDORA)	+= board-omap3pandora.o \
 					   hsmmc.o

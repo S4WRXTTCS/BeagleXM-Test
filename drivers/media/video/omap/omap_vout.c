@@ -75,7 +75,7 @@ enum dma_channel_state {
 
 /* Max Resolution supported by the driver */
 #define VID_MAX_WIDTH		1280	/* Largest width */
-#define VID_MAX_HEIGHT		720	/* Largest height */
+#define VID_MAX_HEIGHT		768	/* Largest height */
 
 /* Mimimum requirement is 2x2 for DSS */
 #define VID_MIN_WIDTH		2
@@ -1184,6 +1184,15 @@ static void omap_vout_buffer_release(struct videobuf_queue *q,
 /*
  *  File operations
  */
+static unsigned int omap_vout_poll(struct file *file,
+				   struct poll_table_struct *wait)
+{
+	struct omap_vout_device *vout = file->private_data;
+	struct videobuf_queue *q = &vout->vbq;
+
+	return videobuf_poll_stream(file, q, wait);
+}
+
 static void omap_vout_vm_open(struct vm_area_struct *vma)
 {
 	struct omap_vout_device *vout = vma->vm_private_data;
@@ -2175,6 +2184,7 @@ static const struct v4l2_ioctl_ops vout_ioctl_ops = {
 
 static const struct v4l2_file_operations omap_vout_fops = {
 	.owner 		= THIS_MODULE,
+	.poll		= omap_vout_poll,
 	.unlocked_ioctl	= video_ioctl2,
 	.mmap 		= omap_vout_mmap,
 	.open 		= omap_vout_open,

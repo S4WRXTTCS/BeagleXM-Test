@@ -196,6 +196,16 @@ config MACH_CRANEBOARD
 	depends on ARCH_OMAP3
 	select OMAP_PACKAGE_CBB
 
+config MACH_AMG7_OMAP35XX
+	bool "AMG LCIC 7inch OMAP 35XX board"
+	depends on ARCH_OMAP3
+	select OMAP_PACKAGE_CUS
+
+config MACH_AMG_XLCORE_CAMERA
+	bool "AMG EVOS XL Core Camera board"
+	depends on ARCH_OMAP3
+	select OMAP_PACKAGE_CUS
+
 config MACH_OMAP3_PANDORA
 	bool "OMAP3 Pandora"
 	depends on ARCH_OMAP3

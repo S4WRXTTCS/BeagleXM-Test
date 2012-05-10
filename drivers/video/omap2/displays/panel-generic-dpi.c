@@ -82,6 +82,56 @@ static struct panel_config generic_dpi_panels[] = {
 		.name			= "generic",
 	},
 
+	/* AUO G121XN01 */
+	{
+		{
+			.x_res		= 1024,
+			.y_res		= 768,
+
+			.pixel_clock	= 65000,
+
+			.hsw		= 49,
+			.hfp		= 135,
+			.hbp		= 136,
+
+			.vsw		= 3,
+			.vfp		= 13,
+			.vbp		= 22,
+		},
+		.acbi			= 0x0,
+		.acb			= 0x28,
+		.config			= OMAP_DSS_LCD_TFT | OMAP_DSS_LCD_IVS |
+					OMAP_DSS_LCD_IHS,
+		.power_on_delay		= 50,
+		.power_off_delay	= 100,
+		.name			= "auo_g121xn01",
+	},
+
+	/* Data Image FG0700A1 */
+	{
+		{
+			.x_res		= 800,
+			.y_res		= 480,
+
+			.pixel_clock	= 31275,
+
+			.hsw		= 49,
+			.hfp		= 38,
+			.hbp		= 39,
+
+			.vsw		= 3,
+			.vfp		= 13,
+			.vbp		= 29,
+		},
+		.acbi			= 0x0,
+		.acb			= 0x28,
+		.config			= OMAP_DSS_LCD_TFT | OMAP_DSS_LCD_IVS |
+					OMAP_DSS_LCD_IHS,
+		.power_on_delay		= 50,
+		.power_off_delay	= 100,
+		.name			= "di_fg0700a1",
+	},
+
 	/* Sharp LQ043T1DG01 */
 	{
 		{
@@ -105,6 +155,31 @@ static struct panel_config generic_dpi_panels[] = {
 		.power_on_delay		= 50,
 		.power_off_delay	= 100,
 		.name			= "sharp_lq",
+	},
+
+	/* Sharp LQ070Y3LG4A */
+	{
+		{
+			.x_res		= 800,
+			.y_res		= 480,
+
+			.pixel_clock	= 31275,
+
+			.hsw		= 49,
+			.hfp		= 38,
+			.hbp		= 39,
+
+			.vsw		= 3,
+			.vfp		= 13,
+			.vbp		= 29,
+		},
+		.acbi			= 0x0,
+		.acb			= 0x28,
+		.config			= OMAP_DSS_LCD_TFT | OMAP_DSS_LCD_IVS |
+					OMAP_DSS_LCD_IHS,
+		.power_on_delay		= 50,
+		.power_off_delay	= 100,
+		.name			= "sharp_lq070",
 	},
 
 	/* Sharp LS037V7DW01 */
@@ -156,6 +231,31 @@ static struct panel_config generic_dpi_panels[] = {
 		.power_on_delay		= 0,
 		.power_off_delay	= 0,
 		.name			= "toppoly_tdo35s",
+	},
+
+	/* United Radiant Technology Corp UMSH-8272MD */
+	{
+		{
+			.x_res		= 800,
+			.y_res		= 480,
+
+			.pixel_clock	= 31275,
+
+			.hsw		= 27,
+			.hfp		= 26,
+			.hbp		= 20,
+
+			.vsw		= 2,
+			.vfp		= 11,
+			.vbp		= 20,
+		},
+		.acbi			= 0x0,
+		.acb			= 0x28,
+		.config			= OMAP_DSS_LCD_TFT | OMAP_DSS_LCD_IVS |
+					OMAP_DSS_LCD_IHS,
+		.power_on_delay		= 50,
+		.power_off_delay	= 100,
+		.name			= "urt_umsh8272md",
 	},
 
 	/* Samsung LTE430WQ-F0C */

@@ -132,10 +132,10 @@ config OMAP_MBOX_KFIFO_SIZE
 	  module parameter).
 
 config OMAP_IOMMU
-	tristate
+	bool
 
 config OMAP_IOMMU_DEBUG
-       tristate "Export OMAP IOMMU internals in DebugFS"
+       bool "Export OMAP IOMMU internals in DebugFS"
        depends on OMAP_IOMMU && DEBUG_FS
        help
          Select this to see extensive information about
